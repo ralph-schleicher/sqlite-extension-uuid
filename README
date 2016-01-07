@@ -1,2 +1,22 @@
-# sqlite-extension-uuid
-SQLite functions for universally unique identifiers
+SQLite functions for universally unique identifiers (UUID).
+
+A UUID has the canonical form 'xxxxxxxx-xxxx-Mxxx-Nxxx-xxxxxxxxxxxx'
+where M is the UUID version, N is the variant, and 'x' is a lowercase
+hexadecimal number.
+
+
+uuidgen()
+     Create a new random UUID.
+     Value is a BLOB of 16 octets.
+
+
+uuid(octets)
+     Convert an UUID from a BLOB into a string.
+     Argument OCTETS is a BLOB of 16 octets.
+     Value is a string with 36 characters.
+
+
+xuuid(string)
+     Convert an UUID from a string into a BLOB.
+     Argument STRING is a string with 36 characters.
+     Value is a BLOB of 16 octets.
